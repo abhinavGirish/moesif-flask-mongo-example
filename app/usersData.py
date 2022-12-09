@@ -101,6 +101,18 @@ def fetch_users():
         return "", 500
 
 
+@app.route("/api/v1/users/<user_id>", methods=['GET'])
+def get_single_user(user_id):
+
+    # filter for id in collection
+
+    if collection.find({"id": int(user_id)}).count() > 0:
+        return dumps(collection.find({"id": int(user_id)}))
+    else:
+        return jsonify([])
+
+
+
 @app.route("/api/v1/users/<user_id>", methods=['POST'])
 def update_user(user_id):
     """
