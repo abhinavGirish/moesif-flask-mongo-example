@@ -1,5 +1,9 @@
 ### Designing RESTful API with Python-Flask and MongoDB
 
+
+Please note - the code here was modified / adapted from the following repository:
+https://github.com/Moesif/moesif-flask-mongo-example
+
 This example project demonstrate how to design RESTful API with Python-Flask and
 MongoDB.
 
@@ -7,7 +11,7 @@ First you'll need to get the source of the project. You could do this by cloning
 
 ```bash
 # Get the project code
-git clone https://github.com/Moesif/moesif-flask-mongo-example.git
+git clone https://github.com/abhinavGirish/moesif-flask-mongo-example.git
 ```
 
 *NOTE: While working with Python, we would recommend to use virtual environment
@@ -31,7 +35,8 @@ pip install -r requirements.txt
 If you're using MacOS, you could use `brew` to start the server.
 
 ```bash
-brew services start mongodb
+brew services start mongodb-community
+
 ```
 
 #### Config the application
